@@ -6,7 +6,7 @@
 	<title>Date time processing</title>
 </head>
 <body>
-	<form>
+	<form >
 		Enter your name and select data and time for the appointment
 		<table>
 			<tr>
@@ -34,7 +34,7 @@
 				
 					<select name="year">
 						<?php 
-							for($i=1900; $i<2009; $i++){
+							for($i=1900; $i<2023; $i++){
 								print "<option> $i </option>";
 							}
 						 ?>
@@ -91,7 +91,7 @@
 			print "More information <br /> In 12 hours, the time and date is ";
 
 			$date= date_create("$year-$month-$day $hour:$minute:$second");
-			print( date_format($date,"Y-m-d h:i:sa"));
+			print( date_format($date," h:i:sA, d/m/Y"));
 			print("<br />");
 
 			if($month == 1 || $month == 3 || $month == 5 || $month == 7 || $month == 8 || $month == 10 || $month == 12){
