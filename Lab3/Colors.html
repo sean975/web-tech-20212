@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="0" value="black">This is default</p>
+        <p id="1" value="red" onmouseover="setColor(1, 'red')" onmouseout="setColor(1)">This is RED</p>
+        <p id="2" value="green" onmouseover="setColor(2, 'green')" onmouseout="setColor(2)">This is GREEN</p>
+        <p id="3" value="blue" onmouseover="setColor(3, 'blue')" onmouseout="setColor(3)">This is BLUE</p>
+    </body>
+    <script type="text/javascript">
+        function setColor(id, color='black'){
+            const p = document.getElementById(id);
+            p.setAttribute('style', `color:${color}`);
+        }
+    </script>
+</html>
