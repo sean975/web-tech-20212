@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>Username:</p><input type="text" id="username" name="username">
+    <p>Email:</p><input type="email" id="email" name="email" required>
+    <p>Telephone:</p><input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="telephone" name="telephone">
+    <input type="button" value="Check" onclick="Check()">
+</body>
+<script type="text/javascript">
+    function Check(){
+        var username = document.getElementById('username').value
+        var email = document.getElementById('email').value
+        var telephone = document.getElementById('telephone').value
+        var mailformat = /^\w+([\]?\w+)*@\w+([\.]?\w+)*(\.\w{2,3})+$/;
+        var phoneno = /^\d{10}$/;
+        if(username == ''){
+            alert("Username not null")
+            return false
+        }
+        if(!email.match(mailformat)){
+            alert("Invalid email address")
+            return false
+        }
+        if(!telephone.match(phoneno)){
+            alert("Invalid phone number")
+            return false
+        }
+        return alert("Valid success!")
+    }
+</script>
+</html>
