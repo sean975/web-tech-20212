@@ -9,7 +9,7 @@
     h3 {
       color: blue;
     }
-    table, td {
+    table, td, th {
       border: 1px solid;
     }
   </style>
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
 }
 
 // update table
-$updateSql = "UPDATE Products SET Numb=Numb-1 WHERE (Product_desc=$prod)";
+$updateSql = "UPDATE Products SET Numb=Numb-1 WHERE (Product_desc='$prod')";
 echo "<p>The query is $updateSql</p>";
 
 $conn->query($updateSql);
@@ -40,29 +40,27 @@ $conn->query($updateSql);
 $sql = "SELECT * FROM Products";
 $result = $conn->query($sql);
 
-// query table
-
-  echo "<table>
-    <th>
-      <td>Num</td>
-      <td>Product</td>
-      <td>Cost</td>
-      <td>Weight</td>
-      <td>Count</td>
-    </th>
-  </table>";
 
 if ($result->num_rows > 0) {
+  echo "<table>";
+    echo "<tr>";
+      echo "<th>Product_ID</th>";
+      echo "<th>Product_desc</th>";
+      echo "<th>Cost</th>";
+      echo "<th>Weight</th>";
+      echo "<th>Number</th>";
+    echo "</tr>";
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    //  echo "<tr>
-    //    <td> $row["ProductID"] </td>
-    //    <td>$row["Product_desc"]</td>
-    //    <td>$row["Cost"]</td>
-    //    <td>$row["Weight"]</td>
-    //    <td>$row["Numb"]</td>
-    //  </tr>";
+      echo "<tr>";
+        echo "<td>" . $row["ProductID"] . "</td>";
+        echo "<td>" . $row["Product_desc"] . "</td>";
+        echo "<td>" . $row["Cost"] . "</td>";
+        echo "<td> " . $row["Weight"] . "</td>";
+        echo "<td>" . $row["Numb"] . "</td>";
+      echo "</tr>";
   }
+  echo "</table>";
 } else {
   echo "0 results";
 }

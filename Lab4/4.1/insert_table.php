@@ -24,7 +24,7 @@
     }
 
     $sql = "INSERT INTO Products (Product_desc, Cost, Weight, Numb)
-    VALUES ($itemDes, $cost, $weight, $numb)";
+    VALUES ('$itemDes', '$cost', '$weight', '$numb')";
     if ($conn->query($sql) === TRUE) {
       echo "The query is $sql<br>";
       echo "New record created successfully";

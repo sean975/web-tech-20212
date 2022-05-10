@@ -8,25 +8,16 @@
   <title>Query table</title>
   <style>
   table,
-  td {
+  td, th {
     border: 1px solid;
   }
   </style>
 </head>
 
 <body>
+  <h3>Products Data</h3>
   <?php
-  echo "<h3>Products Data</h3>";
   echo "The query is SELECT * from Products";
-  echo "<table>
-    <th>
-      <td>Num</td>
-      <td>Product</td>
-      <td>Cost</td>
-      <td>Weight</td>
-      <td>Count</td>
-    </th>
-  </table>";
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -43,16 +34,25 @@ $sql = "SELECT * FROM Products";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+  echo "<table>";
+    echo "<tr>";
+      echo "<th>Product_ID</th>";
+      echo "<th>Product_desc</th>";
+      echo "<th>Cost</th>";
+      echo "<th>Weight</th>";
+      echo "<th>Number</th>";
+    echo "</tr>";
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    //  echo "<tr>
-    //    <td> $row["ProductID"] </td>
-    //    <td>$row["Product_desc"]</td>
-    //    <td>$row["Cost"]</td>
-    //    <td>$row["Weight"]</td>
-    //    <td>$row["Numb"]</td>
-    //  </tr>";
+      echo "<tr>";
+        echo "<td>" . $row["ProductID"] . "</td>";
+        echo "<td>" . $row["Product_desc"] . "</td>";
+        echo "<td>" . $row["Cost"] . "</td>";
+        echo "<td> " . $row["Weight"] . "</td>";
+        echo "<td>" . $row["Numb"] . "</td>";
+      echo "</tr>";
   }
+  echo "</table>";
 } else {
   echo "0 results";
 }
