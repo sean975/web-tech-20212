@@ -1,0 +1,12 @@
+h1 {
+  text-align-last: center;
+}
+p {
+  margin: 0.25in;
+  border: 0.25in solid black;
+  padding: 0.25in;
+}
+.banner {
+  font-size: 50pt;
+  font-family: Arial Rounded MT Bold;
+}
