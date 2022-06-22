@@ -1,0 +1,11 @@
+DTD là tiền thân của lược đồ XML. Trong khi DTD cung cấp cấu trúc / ngữ pháp cơ bản để định nghĩa một tài liệu XML, ngoài ra, lược đồ XML còn cung cấp các phương pháp để xác định các ràng buộc đối với dữ liệu có trong tài liệu. Do đó, lược đồ XML được coi là phong phú và mạnh mẽ hơn DTD. Ngoài ra, lược đồ XML cung cấp một cách tiếp cận hướng đối tượng để xác định cấu trúc của một tài liệu XML. Nhưng vì lược đồ XML là một công nghệ mới nên một số trình phân tích cú pháp XML chưa hỗ trợ nó. Hơn nữa, hầu hết các định nghĩa phong phú và phức tạp về hệ thống kế thừa đều được định nghĩa bằng DTD
+
+Lược đồ XML là nhận biết không gian tên, trong khi DTD thì không.
+
+Các lược đồ XML được viết bằng XML, trong khi các DTD thì không.
+
+Lược đồ XML được gõ mạnh, trong khi DTD thì không.
+
+Lược đồ XML có rất nhiều kiểu dữ liệu có nguồn gốc và có sẵn trong DTD.
+
+Lược đồ XML không cho phép các định nghĩa nội tuyến, trong khi DTD thì không.
