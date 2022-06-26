@@ -334,7 +334,9 @@ section {
 }
 
 .show-products .box-container .box img {
-  height: 30rem;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: scale-down;
 }
 
 .show-products .box-container .box .name {
