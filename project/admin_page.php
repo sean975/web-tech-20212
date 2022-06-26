@@ -28,7 +28,7 @@ if(!isset($admin_id)){
 
 </head>
 <body>
-   
+
 <?php include 'admin_header.php'; ?>
 
 <!-- admin dashboard section starts  -->
@@ -50,7 +50,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_pendings; ?>/-</h3>
+         <h3>$<?php echo $total_pendings; ?></h3>
          <p>total pendings</p>
       </div>
 
@@ -65,12 +65,12 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_completed; ?>/-</h3>
+         <h3>$<?php echo $total_completed; ?></h3>
          <p>completed payments</p>
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
             $number_of_orders = mysqli_num_rows($select_orders);
          ?>
@@ -79,7 +79,7 @@ if(!isset($admin_id)){
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('query failed');
             $number_of_products = mysqli_num_rows($select_products);
          ?>
@@ -88,7 +88,7 @@ if(!isset($admin_id)){
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'user'") or die('query failed');
             $number_of_users = mysqli_num_rows($select_users);
          ?>
@@ -97,7 +97,7 @@ if(!isset($admin_id)){
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_admins = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'admin'") or die('query failed');
             $number_of_admins = mysqli_num_rows($select_admins);
          ?>
@@ -106,7 +106,7 @@ if(!isset($admin_id)){
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_account = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
             $number_of_account = mysqli_num_rows($select_account);
          ?>
@@ -115,7 +115,7 @@ if(!isset($admin_id)){
       </div>
 
       <div class="box">
-         <?php 
+         <?php
             $select_messages = mysqli_query($conn, "SELECT * FROM `message`") or die('query failed');
             $number_of_messages = mysqli_num_rows($select_messages);
          ?>
